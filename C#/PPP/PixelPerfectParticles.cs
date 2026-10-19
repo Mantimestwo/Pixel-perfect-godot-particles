@@ -115,8 +115,8 @@ public partial class PixelPerfectParticles : GpuParticles2D
 				value = new(value.Y, value.Y);
 			animOffset = value;
 			CheckMat();
-			processMat?.SetShaderParameter("anim_offset_min", animSpeed.X);
-			processMat?.SetShaderParameter("anim_offset_max", animSpeed.Y);
+			processMat?.SetShaderParameter("anim_offset_min", animOffset.X);
+			processMat?.SetShaderParameter("anim_offset_max", animOffset.Y);
 		}
 	}
 	Vector2 animOffset;
