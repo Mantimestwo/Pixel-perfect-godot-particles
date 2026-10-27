@@ -62,9 +62,9 @@ public partial class PixelPerfectParticles : GpuParticles2D
 		get { return emissionVelocity; }
 		set
 		{
-			if(value.X > emissionVelocity.Y)
+			if(value.X > value.Y)
 				value = new(value.X, value.X);
-			if (value.Y < emissionVelocity.X)
+			if (value.Y < value.X)
 				value = new(value.Y, value.Y);
 			emissionVelocity = value;
 			CheckMat();

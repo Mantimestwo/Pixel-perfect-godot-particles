@@ -31,9 +31,9 @@ extends GPUParticles2D
 @export var emissionVelocity : Vector2:
 	get: return emissionVelocity
 	set(value):
-		if (value.x > emissionVelocity.y):
+		if (value.x > value.y):
 			value = Vector2(value.x, value.x)
-		if (value.y < emissionVelocity.x):
+		if (value.y < value.x):
 			value = Vector2(value.y, value.y)
 		emissionVelocity = value
 		CheckMat()
